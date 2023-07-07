@@ -3,11 +3,6 @@ const discord = require("discord.js")
 const bot = new discord.Client({ intents: 3276799})
 const token = "your-token"
 const prefix = "!"
-const sqlite3 = require("sqlite3").verbose();
-const db = new sqlite3.Database("./info.db", sqlite3.OPEN_READWRITE, (err) =>{
-    if (err) return console.log(err.message);
-})
-
 
 bot.login(token)
 bot.on("ready", client=>{
